@@ -61,4 +61,11 @@ public class Topico {
     public String getAutorName(){
         return autor.getLogin();
     }
+
+    public void actualizarTopico(DatosActualizarTopico datosActualizarTopico) {
+        this.titulo = (datosActualizarTopico.titulo() == null) ? this.titulo : datosActualizarTopico.titulo();
+        this.mensaje = (datosActualizarTopico.mensaje() == null) ? this.mensaje : datosActualizarTopico.mensaje();
+        this.estado = (datosActualizarTopico.estado() == null) ? this.estado : datosActualizarTopico.estado();
+        this.curso = (datosActualizarTopico.curso() == null) ? this.curso : datosActualizarTopico.curso();
+    }
 }
